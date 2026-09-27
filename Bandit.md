@@ -206,4 +206,18 @@ Login
 Solution
 
 - ls
--
+- strings data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+  - [ROT13](https://en.wikipedia.org/wiki/ROT13)
+  - This command shifts every letter forward by 13 positions in the alphabet (ROT13) to instantly encode or decode rotated text.
+- password: GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+- logout
+
+## Level 13
+
+Login
+- ssh -p 2220 bandit12@bandit.labs.overthewire.org
+- password: GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+
+Solution
+
+- ls
