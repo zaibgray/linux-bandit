@@ -150,6 +150,8 @@ Solution
 
 ## Level 9
 
+The pipe operator (|) takes the output of one command and automatically feeds it as the input into the next command, like a pipeline connecting two tools.
+
 Login
 - ssh -p 2220 bandit8@bandit.labs.overthewire.org
 - password: VR1ljMayciFxbnUokuQmJFw6QC9VKtub
@@ -157,3 +159,51 @@ Login
 Solution
 
 - ls
+- sort data.txt | uniq -u
+- password: EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl
+- logout
+
+## Level 10
+
+Login
+- ssh -p 2220 bandit9@bandit.labs.overthewire.org
+- password: EjmOSvuAu7sGAHqHVcBDPirRe9T03kxl
+
+Solution
+
+- ls
+- strings filename.txt | grep -E '^={2,}'
+
+  - strings filename.txt: Extracts all readable text from the file.
+
+  - |: Feeds that text into the next command.grep 
+
+  - -E: Searches the text using advanced rules.
+  - '^={2,}': Matches only lines starting with == or more.
+
+- password: B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+- logout
+
+## Level 11
+
+Login
+- ssh -p 2220 bandit10@bandit.labs.overthewire.org
+- password: B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+
+Solution
+
+- ls
+- base64 -d data.txt
+- password: pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+- logout
+
+## Level 12
+
+Login
+- ssh -p 2220 bandit11@bandit.labs.overthewire.org
+- password: pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+
+Solution
+
+- ls
+-
