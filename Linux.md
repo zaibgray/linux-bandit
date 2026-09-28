@@ -64,94 +64,58 @@ There are on-line manuals which gives information about most commands. The manua
 - man pwd -> find out more about the pwd command
 - man man
 
-### Navigation & Files
+### Structure of Linux Command
 
-Before you can do anything else on Linux, you need to move around and manage files — this is the muscle memory you'll build first.
+- Command name + Options + Arguments
+- cat -n abc.txt
+- options are case sensitve
+- options can be combined
+- option short from: can -n abc.txt
+- option long form: cat --number abc.txt
 
-- cd folder -> move into a folder
-- cd .. -> move up one folder
-- ls -la -> list all files, including hidden ones, with details (size, owner, permissions)
-- pwd -> show where you currently are
-- cp source dest -> copy a file or folder
-- mv old new -> move or rename a file
-- rm -i file -> delete a file (asks "are you sure?" first — safer than plain rm)
-- mkdir -p a/b/c -> create a folder, and any missing parent folders, in one go
-- find . -name "*.py" -> search the current folder (and subfolders) for files matching a pattern
-- grep -r "text" . -> search inside files for a piece of text
+### man command
 
-### Viewing Files
+- man -> displays manual pages
+  - NAME -> name and work
+  - SYNOPSIS
+        - [] -> Optional
+        - ... -> Can give one or more options or arguments
+        - without [] mean must need
+  - DESCRIPTION -> give all the info about options and agruments
 
-You often don't want to open a full editor just to peek at a file — these let you read without editing.
+### ls, pwd and cd
 
-- cat file -> dump the whole file to the screen (good for short files)
-- less file -> open a file you can scroll through (press q to quit)
-- head file -> show the first 10 lines (useful for checking a file's shape)
-- tail -f file -> show the last lines and keep watching for new ones — the go-to for live logs
+- pwd -> print working directory
+- ls -> list files
+- cd -> change directory
+- ls -a -> shows all file even hidden
+- cd . -> same directory
+- cd .. -> take you previous directory
+- cd -l -> long formate of files
+- cd -la -> grouping options
+- cd -lah -> groupging with human-readable
+- cd -laht -> sort with time
+- cd -lahtr -> sort in reverse
+- ls -l --sort=time -r
+- ls -lahtS -> sort by size
+- ls Music
+- cd / -> root directory
+- cd ~ -> home directory
+- Absolute path
+  - cd /home/zei/Documents
+  - a path from root
+- Relative path
+  - cd Documents/
 
-### Permissions
+### Timestamps: Modification, Access and Change times
 
-Linux is strict about who can read, write, or run a file. These commands change that.
+- ls -l -> shows modification time
+- ls -lc -> shows change time
+- ls -lu -> shows access time of the file
 
-- chmod +x file -> make a file runnable (e.g. a script)
-- chmod 755 file -> set exact permissions: owner can read/write/run, everyone else can read/run
-- chown user:group file -> change who owns a file
-- sudo command -> run one command with admin rights (asks for your password)
+### File Management: mkdir, touch and file
 
-### Processes & System
-
-Everything running on your machine is a "process". These commands let you see and control them.
-
-- ps aux -> list every running process, right now, as a snapshot
-- top -> same idea, but live and updating (press q to quit)
-- kill -9 PID -> force-stop a process by its ID number (get the ID from ps aux or top)
-- df -h -> show how much disk space is used/free, in human-readable sizes (GB, MB)
-- du -sh * -> show the size of each file/folder in the current directory
-- free -h -> show how much RAM is used/free
-
-### Networking
-
-For talking to other machines — servers, websites, your VPS.
-
-- ping host -> check if a machine is reachable (e.g. ping google.com)
-- curl url -> fetch a URL and print the response — handy for testing APIs
-- ssh user@host -> log into a remote machine's terminal
-- scp file user@host:/path -> copy a file to a remote machine over SSH
-- ip a -> show your machine's network interfaces and IP addresses
-
-### Package Management
-
-How you install and remove software, the Linux way (instead of downloading .exe files).
-
-- sudo apt install pkg -> install a package (Debian/Ubuntu)
-- sudo apt remove pkg -> uninstall a package
-- apt list --installed -> see everything currently installed
-
-### Compression
-
-Bundling files together, or unpacking bundles someone sent you.
-
-- tar -czvf out.tar.gz folder/ -> compress a folder into a single .tar.gz file
-- tar -xzvf file.tar.gz -> extract a .tar.gz file back into its contents
-- unzip file.zip -> extract a .zip file
-
-### Shell Productivity
-
-Small habits that save real time once they're automatic.
-
-- history -> show a list of commands you've typed before
-- !! -> instantly re-run your last command (great after sudo !!)
-- Ctrl+R -> start typing to search your command history
-- alias ll='ls -la' -> create a shortcut for a long command (save this line in ~/.bashrc to make it permanent)
-- command1 && command2 -> run command2 only if command1 succeeded
-- command1 | command2 -> pipe: feed the output of command1 into command2
-
-### Git
-
-Version control — tracking changes to your code over time.
-
-- git status -> see what's changed since your last commit
-- git add . -> stage all changes, ready to commit
-- git commit -m "message" -> save a snapshot of staged changes
-- git push -> upload your commits to the remote (e.g. GitHub)
-- git pull -> download the latest commits from the remote
-- git log --oneline -> see commit history, one line per commit
+- mkdir movies
+- mkdir -p kids/animation/2021
+- touch -> change file timestep
+-
