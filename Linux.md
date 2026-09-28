@@ -117,5 +117,19 @@ There are on-line manuals which gives information about most commands. The manua
 
 - mkdir movies
 - mkdir -p kids/animation/2021
+- mkdir -p movies/{comedy,love} -> must not add space between ","
+- man touch
 - touch -> change file timestep
--
+- touch -a -> change access time
+- touch -m -> change modification time
+- touch -> also make files
+- touch london.txt names.txt love.txt
+- touch can make any file (a.html, love.jpg, k.exe)
+- without extention it make file witout extention
+- touch a.html b.css. c.js
+- touch 'hello world.txt'
+- file -> display file's content type
+- touch abc.txt
+- cat << 'EOF' >> abc.txt
+- mv abc.txt abc.mp4
+- file abc.mp4 -> it will show ASCII text, beacuse it has text content not mp4
