@@ -146,3 +146,14 @@ There are on-line manuals which gives information about most commands. The manua
 - Ctrl-down-key: go to the end of the text
 - Ctrl-A: go to the start of the line
 - Ctrl-E: go to the end of the line
+- Ctrl + Shift + C : copy to global
+- Ctrl + Shift + v : paste to global
+- Alt + ^ copy the line/selected
+- Ctrl-K: cut a line / selected
+- Ctrl-U: Paste
+- Alt+U: Undo
+- Ctrl-W: Search for a string or a regular expression
+- Ctrl + \ : replace a string
+
+### File Management: Remove, Rename, Copy and Movie files and folders
+
