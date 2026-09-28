@@ -133,3 +133,16 @@ There are on-line manuals which gives information about most commands. The manua
 - cat << 'EOF' >> abc.txt
 - mv abc.txt abc.mp4
 - file abc.mp4 -> it will show ASCII text, beacuse it has text content not mp4
+
+### Nano Text Editor
+
+- Nano is a simple, easy-to-use text editor that operates within a terminal window.
+- if a file is not there, it creates & open it.
+- nano hell.txt
+- Ctrl-O: write the current file to disk.
+- Ctrl-X: close the current file buffer and exit the editor.
+- Alt-G: got to a specific line number
+- Ctrl-up-key: go to the start of the text
+- Ctrl-down-key: go to the end of the text
+- Ctrl-A: go to the start of the line
+- Ctrl-E: go to the end of the line
