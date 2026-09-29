@@ -205,7 +205,14 @@ There are on-line manuals which gives information about most commands. The manua
 - man less
 - less foods.txt -> use scroll to see up and down or use up and down key, use space bar to swtich page and use / to search anything in text
 
-
 ### standard output and error in linux
 
 When a program or command is executed in the terminal, it generates output that can be displayed directly in the terminal window. This output is known as the standard output.
+
+- ls -> shows standard output
+- ls > list.txt -> saved standard output in file also overwirte
+- ls >> list.txt -> save standard output and append it
+- ls -lah 1> output.txt -> 1 use for standard output
+- ls -lah 2> output.txt -> 1 use for standard error output
+- ls -z > output.txt 2> error.txt -> if error come it goes in error.txt else output in output.txt
+- if you ran gain ls -lah > output.txt 2> error.txt, it will wipe all data from error.txt, but if you use >> insted of > it will keep privious data and just append data.
