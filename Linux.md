@@ -166,6 +166,25 @@ There are on-line manuals which gives information about most commands. The manua
 - cp another_2012.mp4 another_2012_5_start.mp4
 - cp hello.mp4 a -> if a folder doesnt exist it make a file else it copy hello.mp4 into a folder if a folder exist
 
-### cat command
+### cat, tac, rev, echo commands
 
-- 
+- man cat
+- cat a.txt b.txt
+- cat a.txt b.txt > txt
+- cat c.txt
+- ">" : it overwrite all file
+- ">>" : it add text at the end
+- cat b.txt > c.txt
+- cat a.txt >> c.txt
+- cat > a.txt: it allow you to overwrite and after Ctrl-D then Ctrl-C to save
+- cat >> a.txt: it allow you to add txt at the end then do Ctrl-D then Ctrl-C to save
+- Ctrl-D : tells end of input
+- same thing we can do with echo
+- echo "abc" > aaaa.txt
+- echo "noo" >> aaaa.txt
+- cat aaaa.txt: it will show you the text
+- cat > foods.txt
+- ls
+- cat foods.txt
+- tac foods.txt: it reverse the order of list
+- rev foods.txt: it reverse line chractevise -> abc -> cba
