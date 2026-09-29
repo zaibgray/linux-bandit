@@ -216,3 +216,14 @@ When a program or command is executed in the terminal, it generates output that 
 - ls -lah 2> output.txt -> 1 use for standard error output
 - ls -z > output.txt 2> error.txt -> if error come it goes in error.txt else output in output.txt
 - if you ran gain ls -lah > output.txt 2> error.txt, it will wipe all data from error.txt, but if you use >> insted of > it will keep privious data and just append data.
+
+### sort commnd
+
+- man sort -> sort lines of text files
+- sort food.txt -> sort food.txt lines
+- sort -r food.txt -> sort in reverse order
+- sort -n number.txt -> sort numbers
+- ls -lh >> files.txt
+- sort -k5h files.txt -> sort 5th column in human readable form
+- sort -k5hr files.txt -> sort in reverse 5th column in human readable form
+- sort -u food.txt -> sort only unique
