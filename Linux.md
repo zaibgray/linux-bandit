@@ -157,3 +157,15 @@ There are on-line manuals which gives information about most commands. The manua
 
 ### File Management: Remove, Rename, Copy and Movie files and folders
 
+- man rm
+- rm -> remove file without sending to recycle bin
+- rm -dr -> remove directoreis and inner files
+- man cp
+- cp up.mp4 zootopia.mp4 ../../action/
+- mv another.mp4 ../horror/another_2012.mp4
+- cp another_2012.mp4 another_2012_5_start.mp4
+- cp hello.mp4 a -> if a folder doesnt exist it make a file else it copy hello.mp4 into a folder if a folder exist
+
+### cat command
+
+- 
