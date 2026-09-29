@@ -227,3 +227,30 @@ When a program or command is executed in the terminal, it generates output that 
 - sort -k5h files.txt -> sort 5th column in human readable form
 - sort -k5hr files.txt -> sort in reverse 5th column in human readable form
 - sort -u food.txt -> sort only unique
+
+## pipe operators in linux
+
+- "|" -> this is pipe operators is used to give one commond's output to other command's input
+- ls -lah | sort -k5h -> ls output will be sorted by sort command
+- man grep -> use to find text
+- cat food.txt | grep 'pizza' -> find the pizza text in food.txt
+- cat food.txt | grep 'mango' -> no text no output
+- ls -lah | sort -k5h | tail -5
+
+### grep command
+
+- man grep
+- grep "pattern" file_name -> basic syntax
+- grep "pizza" food.txt
+- grep command is case sensitive
+- grep -i "pizza" food.txt -> will find case sensitve as well
+- grep -ic "pizza" food.txt -> show only count
+- grep -in "pizza" food.txt -> show line number
+- grep -iw "pizza" food.txt -> to search only single word like pizza not pizzakizza, so it only find pizza
+- grep -iB2 "pizza" food.txt -> show 2 line before pizza as well
+- grep -iB2 -A2 "pizza" food.txt -> show 2 line before pizza and after as well
+- grep -iC2 -> it combine after and before
+- grep -r "hello" -> find "hello" in current directory
+- also use regular experession in pattern -> study regix
+- tail -f food.txt | grep "tomato" -> to find logs
+- tail -f app.log | grep "ERRPR" -C10 -> it will continously look for error in log file
