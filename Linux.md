@@ -188,3 +188,24 @@ There are on-line manuals which gives information about most commands. The manua
 - cat foods.txt
 - tac foods.txt: it reverse the order of list
 - rev foods.txt: it reverse line chractevise -> abc -> cba
+
+### head, tail and less commands
+
+- head foods.txt -> show first 10 lines
+- tail foods.txt -> show last 10 lines
+- head -n 1 foods.txt -> show only first line
+- tail -1 foods.txt -> shortcut
+- tail -f foods.txt -> it shows live changes, we use it mostly
+- cat >> food.txt -> open the new terminal in other tab then add and see the result in first terminal
+- tail -f file_name -> mostly use to see live that change in software development
+- mainly log file and api testing
+- cat food.txt
+- sometimes we see scroll able terminal
+- use less command to see less line on terminal and then scroll
+- man less
+- less foods.txt -> use scroll to see up and down or use up and down key, use space bar to swtich page and use / to search anything in text
+
+
+### standard output and error in linux
+
+When a program or command is executed in the terminal, it generates output that can be displayed directly in the terminal window. This output is known as the standard output.
