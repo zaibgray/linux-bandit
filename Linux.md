@@ -274,4 +274,13 @@ When a program or command is executed in the terminal, it generates output that 
 
 ### Linux Terminal Shortcuts
 
+- Ctrl + A -> to bring courser at the start of line
+- Ctrl + E -> to bring courser at the end of line
+- Alt + B -> skips word backword
+- Alt + F -> skips word forword
+- up key -> show previous command used in terminal
+- down key -> show previous command but to newest
+- Ctrl + R -> search used command like history
+- Ctrl + K -> clears text from cursor to line's end.
+- Ctrl + Y -> pasted cut/copied text
 - 
