@@ -254,3 +254,24 @@ When a program or command is executed in the terminal, it generates output that 
 - also use regular experession in pattern -> study regix
 - tail -f food.txt | grep "tomato" -> to find logs
 - tail -f app.log | grep "ERRPR" -C10 -> it will continously look for error in log file
+
+### arithmetic operations and epressions in linux
+
+- echo 2+3 -> wont work
+- echo $()
+- echo $((2+3))
+- echo $((2*3))
+- echo $((2**3))
+- echo $((2/3))
+- echo $((2%3))
+- echo $((2%(3 -3)))
+- echo $((2**3 -3))
+- echo $(2+3) -> command not fond
+- echo $(ls)
+- (ls; ls)
+- (cd Downloads/ && ls) -> it run sub command
+- (cd Downloads/ || ls) -> it run sub command
+
+### Linux Terminal Shortcuts
+
+- 
