@@ -283,4 +283,64 @@ When a program or command is executed in the terminal, it generates output that 
 - Ctrl + R -> search used command like history
 - Ctrl + K -> clears text from cursor to line's end.
 - Ctrl + Y -> pasted cut/copied text
-- 
+- Alt + D -> linux terminal deletes characters to the end of the current word.
+- Ctrl + W -> linux terminal deletes characters to the start of the current word.
+- Ctrl + L -> clears all the command
+- Ctrl + shift + + -> zoom in
+- Ctrl + -  -> zoom out
+- Tab -> auto compelet
+
+### find command
+
+- man find -> use to find anything
+- find [path...] [expression] -> formate
+- The -name option in the find command accepts patterns that follow standard shell wildcard characters.
+- find/path/to/search -name "filename"
+- wildcard characters
+  - "*" -> mathces any string of characters, including an empty string.
+  - "?" -> matches any single character
+  - "[]" -> Matches any one of the enclosed characters. For example, [abc] matches 'a', 'b', or 'c'
+  - "!" -> When used as the first character in a pattern, it negates the pattern.
+- find/path -name "*.pdf"
+- find -iname "food.txt" -> to find case sensitive files as well
+
+- find /path -iname "*.pdf"
+- find /path -iname "journal*"
+- find /path -iname "*pattern*"
+- find -type f iname "*.pdf" -> file
+- find -type d iname food -> directory
+
+- find /path -size +100M -> for file larger than 100MB
+- find /path -size -50K -> for file smaller than 50KB
+
+- find /path -mtime +7 -> for files modified more than  7 days
+- find /path -mtime -7 -> for files modified in the last 7 days
+- find /path -mtime 7 -> for files modified exactly  7 days
+  - mmin -> modified time in minutes
+  - amin -> access time in minutes
+  - cmin -> change time in minutes
+  - ctime
+  - atime
+
+- find path/ -size +1000MB mtime +360
+
+- find /path -type f -name "*.txt" -and -size +1M
+- find/path \(-name "*.txt" -or-name "*.pdf" \)
+- find/path! -name "*.txt"
+- find /path -type d -empty
+- find /path -name "*.txt" -exec command {} ';'
+  - "-" exec is followed by the command you want to execute.
+  - "{}" represents the placeholder for the found file or directory.
+  - ";" marks the end of the command to be executed.
+
+### Permissions in Linux
+
+- ls -lah -> you see -rw-r--r--
+- l rwx rwx rwx
+  - l -> tells files type
+    - l -> mean link
+    - "-" -> mean file
+    - d -> directory
+  - first -> rwx -> owner's permission, can read, write and execute
+  - second -> rwx -> group's permission, can read, write and execute
+  - third -> rwx -> other's user permission, can read, write and execute
