@@ -390,3 +390,61 @@ When a program or command is executed in the terminal, it generates output that 
 - man chown -> change owner
 - sudo chown user_name file_name
 - sudo chown zei test
+- sudo chown :group_change_name file_name
+- sudo chown :zei_new test2
+
+## sessions in linux
+
+- A Linux session is the time from when you log into a computer until you log out, during which all your programs and settings run.
+- echo $$ -> precess id
+- exit
+- bash
+- echo $$
+
+### Linux Environment variables
+
+- printenv
+- echo $USER
+- printenv
+- name=zeii
+- echo $USER
+- printenv
+
+### alias commands
+
+- cat .bashrc
+- touch a.txt
+- alias a='cat ~/a.txt'
+- nano .bashrc
+- add alias a='cat ~/a.txt'
+- it will run even sassion end
+
+### bash
+
+- A shell is a command-line interface (CLI) that allows users to interact with an operating system by typing commands.
+- It serves as a mediator between the user and the operating system, enabling users to run programs, manage files, configure system settings, and perform various other tasks.
+- Shells also support scripting, allowing users to write scripts (sequences of commands) to automate tasks.
+- There are several types of shells, and they can be broadly categorized into two main groups: Unix-like shells and Windows shells
+- Bourne Shell (sh): The Bourne Shell was one of the earliest Unix shells and served as the basis for many subsequent shells. It provides basic functionality and is often used for scripting.
+- Bash (Bourne Again SHell): Bash is the default shell for many Unix-like operating systems, including Linux and macOS. It extends the capabilities of the original Bourne Shell and incorporates features from other shells like the Korn Shell and the C Shell.
+- Korn Shell (ksh): The Korn Shell was developed by David Korn as an enhancement to the Bourne Shell. It includes features from both the Bourne Shell and the C Shell, making it a powerful and user-friendly shell.
+- C Shell (csh): The C Shell has a syntax that is somewhat C-like and was developed to provide interactive features not present in the original Bourne Shell. Its successor, tcsh, is an improved version with additional features.
+- Zsh (Z Shell): Zsh is an extended shell that incorporates features from bash, ksh, and tcsh. It includes advanced scripting capabilities and interactive features for users.
+- Command Prompt (cmd.exe): The Command Prompt is the traditional command-line interface for Windows. While it lacks some advanced features found in Unix-like shells, it provides a basic command-line environment.
+- PowerShell: PowerShell is a more recent and powerful shell for Windows. It is designed for automation and task scripting, with a focus on managing system components through a command-line interface.
+
+### path
+
+- The PATH variable contains a list of directories where the shell looks for executable files.
+- echo $PATH
+- nano .bashrc
+- PATH=$PATH:/home/zei/bin
+- echo $PATH
+
+### Linux Scripts
+
+- In Linux, a script is a series of commands written in a scripting language (like Bash) that can be executed by the shell.
+- #!/bin/bash
+- echo "Hello, Linux scripting!"
+- When you execute a script, the system typically relies on the shebang (the #!/bin/bash line at the beginning of the script) to determine the interpreter that should be used, regardless of the file extension. This allows you to name your scripts with or without a .sh extension.
+-
