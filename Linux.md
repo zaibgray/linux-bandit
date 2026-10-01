@@ -344,3 +344,49 @@ When a program or command is executed in the terminal, it generates output that 
   - first -> rwx -> owner's permission, can read, write and execute
   - second -> rwx -> group's permission, can read, write and execute
   - third -> rwx -> other's user permission, can read, write and execute
+
+### chmod command
+
+- touch a.txt
+- ls -lah
+- chmod [onwer, group, other, u/g/o] [grand permission or remove, or only set read, write or exute with =, like u=w -/+/=] [r/w/x]
+
+### su command
+
+- man su
+- whoami
+- su --login user_name
+- su - user_name
+- exit -> back to main user
+- su -> become useful when we want perivillages of other user or swithch to user who has all the permission
+
+### groups in linx
+
+- groups
+- groups zei
+- sudo addgroup/groupadd noir
+- sudo adduser/useradd zei noir
+- sudo usermod -aG noir zei
+- sudo groupadd developers
+- sudo usermod -aG developers zei
+- groups zei
+- sudo groupmod -n new_group_name old_group_name
+- sudo usermod -aG group_name username
+- sudo groupdel group_name
+- sudo mkdir developers
+
+### root user in linux
+
+- man sudo
+- sudo -l
+- sudo dnf update
+
+### bashrc
+
+- .bashrc is a script it run when we start shell
+
+### chown command
+
+- man chown -> change owner
+- sudo chown user_name file_name
+- sudo chown zei test
