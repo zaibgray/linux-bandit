@@ -220,82 +220,33 @@ Login
 
 Solution
 
-### Step 1: Create a Sandbox and Copy the File
-You cannot create or modify files in the default directory. Move to a temporary folder under `/tmp` and copy `data.txt` there.
-```bash
-cd $(mktemp -d)
-cp ~/data.txt .
-```
-
-### Step 2: Reverse the Hexdump
-The file `data.txt` is just text representing a hex dump. Turn it back into a raw binary file named `data1`.
-```bash
-xxd -r data.txt > data1
-```
-
-### Step 3: Decompress Layer 1 (gzip)
-The `file data1` command shows this is a gzip compressed file. Rename it with a `.gz` extension and decompress it.
-```bash
-mv data1 data1.gz
-gzip -d data1.gz
-```
-
-### Step 4: Decompress Layer 2 (bzip2)
-The resulting file is now bzip2 compressed. Rename it to `.bz2` and decompress it.
-```bash
-mv data1 data1.bz2
-bzip2 -d data1.bz2
-```
-
-### Step 5: Decompress Layer 3 (gzip)
-It is compressed with gzip again. Add `.gz` and extract it.
-```bash
-mv data1 data1.gz
-gzip -d data1.gz
-```
-
-### Step 6: Decompress Layer 4 (tar)
-This layer is a tar archive. Rename it to `.tar` and extract its contents (which outputs a new file named `data5.bin`).
-```bash
-mv data1 data1.tar
-tar -xf data1.tar
-```
-
-### Step 7: Decompress Layer 5 (tar)
-The file `data5.bin` is another tar archive. Rename it and extract it (which outputs `data6.bin`).
-```bash
-mv data5.bin data5.tar
-tar -xf data5.tar
-```
-
-### Step 8: Decompress Layer 6 (bzip2)
-The file `data6.bin` is bzip2 compressed. Rename it to `.bz2` and extract it.
-```bash
-mv data6.bin data6.bz2
-bzip2 -d data6.bz2
-```
-
-### Step 9: Decompress Layer 7 (tar)
-The file `data6` is a tar archive. Rename it to `.tar` and extract it (which outputs `data8.bin`).
-```bash
-mv data6 data6.tar
-tar -xf data6.tar
-```
-
-### Step 10: Decompress Layer 8 (gzip)
-The file `data8.bin` is the final gzip compressed layer. Rename it to `.gz` and extract it.
-```bash
-mv data8.bin data8.gz
-gzip -d data8.gz
-```
-
-### Step 11: Read the Password
-The final file `data8` is plain text. Read it to get your password for Level 13.
-```bash
-cat data8
-```
-- password: qQYQiHOBPR8zR61qxYqX45quvihF2uzk
+- mktemp -d -> creating directory in /tmp
+- cp data.txt /tmp/tmp.L4eY96Xcq0 -> making copy of data
+- cd /tmp/tmp.L4eY96Xcq0 -> opening tmp directory
+- mv data.txt data.hex ->  changing txt to hex
+- xxd -r data.hex data ->  converting hexdump to orginal binary file
+- file data -> compression format is gzip
+- mv data data.gz -> changing data to gz
+- gunzip data.gz
+- mv data data.bz2
+- bunzip2 data.bz2
+- mv data data.tar
+- tar -xf data.tar
+- file * -> for each file
+- tar -xf data5.bin
+- file *
+- mv data6.bin data6.bz2
+- bunzip2 data6.bz2
+- file *
+- tar -xf data6
+- file *
+- mv data8.bin data8.gz
+- gunzip data8.gz
+- file *
+- cat data8
+- passoword : qQYQiHOBPR8zR61qxYqX45quvihF2uzk
 - logout
+
 
 ## Level 14
 
@@ -305,4 +256,8 @@ Login
 
 Solution
 
-- 
+- ls
+- scp -P 2220 bandit13@bandit.labs.overthewire.org:sshkey.private ~/Desktop/
+- chmod 600 ~/Desktop/sshkey.private
+- ssh -i ~/Desktop/sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+- password: aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
