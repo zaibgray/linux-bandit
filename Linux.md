@@ -447,4 +447,50 @@ When a program or command is executed in the terminal, it generates output that 
 - #!/bin/bash
 - echo "Hello, Linux scripting!"
 - When you execute a script, the system typically relies on the shebang (the #!/bin/bash line at the beginning of the script) to determine the interpreter that should be used, regardless of the file extension. This allows you to name your scripts with or without a .sh extension.
--
+- how to execute
+- nano hi
+  - #!/bin/bash
+  - echo "hi $USER"
+  - echo "hi $USER"
+  - echo "hi $USER"
+  - echo "hi $USER"
+  - echo "hi $USER"
+- for ways to execute
+- bash myFirstScript
+  - This explicitly tells the Bash shell to execute the script. It's commonly used for Bash scripts.
+- sh myFirstScript
+  - This instructs the system to use the default shell
+- source myFirstScript
+  - This runs the script in the current shell session instead of spawning a new process. It's often used to execute scripts that modify the environment, such as setting environment variables.
+- ./myFirstScript
+  - Requires the script to be made executable
+If the file is found and has execute permission, the shell executes it using the appropriate interpreter specified in the shebang line.
+- chmod +x hi
+
+### cron job
+
+- crontab -e -> to edit cron table, where all cron job are written
+- press 1 0 -> for nano editor
+- cron expression
+- "***** command_to_be_executed"
+  1. Minute(0 - 59)
+  2. Hour(0 - 23)
+  3. Day of month(1-31)
+  4. Month(1-12)
+  5. Day of week(0 - 6, where sunday is 0 and saturday is 6)
+- 30 3 * * 1 echo "hellow"
+- 0*5**
+- Asterisk (*): Matches any value for the respective time unit.
+- Comma (,): Specifies a list of values.
+- Hyphen (-): Specifies a range of values.
+- Slash (/): Specifies a step value for the range. For example, */5 in the minute field means every 5 minutes.
+- 45 4 * 1,2 0
+- 30 8 * * 1-5
+
+### history command
+
+- history -> shows what commands were run
+- !! -> run last command
+- !42 -> commnad number
+- history -c -> clear history
+- history -d  45 -> line number to delete
