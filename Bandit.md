@@ -336,7 +336,26 @@ Solution
 
 Login
 
-- ssh -p 2220 bandit20@bandit.labs.overthewire.org
+- ssh -p 2220 bandit19@bandit.labs.overthewire.org
 - password: KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI
 
 Solution
+
+- ls -lah
+- ./bandit20-do cat /etc/bandit_pass/bandit20
+- password: 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
+
+## Level 21
+
+Login
+
+- ssh -p 2220 bandit20@bandit.labs.overthewire.org
+- password: 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
+
+Solution
+
+- ls -lah
+- ./suconnect
+- echo '4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA' | nc -nlvp 1234 &
+- ./suconnect 1234
+- password: 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
