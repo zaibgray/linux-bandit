@@ -261,3 +261,82 @@ Solution
 - chmod 600 ~/Desktop/sshkey.private
 - ssh -i ~/Desktop/sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 - password: aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
+
+## Level 15
+
+Login
+
+- ssh -p 2220 bandit14@bandit.labs.overthewire.org
+- password: aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
+
+Solution
+
+- nc localhost 30000
+- aaWecNkG4FhxJQxz07uiwzVP6bJiYS65
+- password: pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+- exit
+
+## Level 16
+
+Login
+
+- ssh -p 2220 bandit15@bandit.labs.overthewire.org
+- password: pbLYuZtTg4MgaqfJx8jbA9gKKGqM68A7
+
+Solution
+
+- ncat --ssl localhost 3000l
+- enter password of bandit15
+- password: kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+
+## Level 17
+
+Login
+
+- ssh -p 2220 bandit16@bandit.labs.overthewire.org
+- password: kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+
+Solution
+
+- nmap -p 31000-32000 localhost
+- nmap -sV -p 31000-32000 localhost
+- ncat --ssl localhost 31790 -> port 31790 has ssl/unknown
+- enter password: kS0Hf0u5HiXFwKMKFqXvPdOTNGGa0X8V
+- you will get key -> copy it
+- exit
+- nano b17.key -> ctrl+o, enter, ctrl+x
+- chmod 600 b17.key
+- ssh -i b17.key bandit17@bandit.labs.overthewire.org -p 2220
+
+### Level 18
+
+Login
+
+- ssh -i b17.key bandit17@bandit.labs.overthewire.org -p 2220
+
+Solution
+
+- ls
+- diff passwords.old passwords.new
+- password: OQxXZjELndr90zuhOTDYBEomI0SZITXI
+
+
+## Level 19
+
+Login
+
+- ssh bandit18@bandit.labs.overthewire.org -p 2220 "cat readme"
+- password: OQxXZjELndr90zuhOTDYBEomI0SZITXI
+
+Solution
+
+- password: KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI
+
+## Level 20
+
+Login
+
+- ssh -p 2220 bandit20@bandit.labs.overthewire.org
+- password: KpsOfPkcP7i1FlIExk2QEjyt6dw8dxZI
+
+Solution
