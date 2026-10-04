@@ -486,11 +486,45 @@ Solution
 - git show 4357a6e76c600eb95daf13b1c315b95faab9d4e6
 - password: Em7eGtqaMySwNFjCpwzzHhLhospOcdt0
 
-## Level 26
-
-Login
-
-- ssh -p 2220 bandit29@bandit.labs.overthewire.org
-- password: Em7eGtqaMySwNFjCpwzzHhLhospOcdt0
+## Level 29
 
 Solution
+
+- mktemp -d
+- cd /tmp/tmp.cEyWyxDMH6
+- git clone ssh://bandit29-git@bandit.labs.overthewire.org:2220/home/bandit29-git/repo
+- password: Em7eGtqaMySwNFjCpwzzHhLhospOcdt0
+- cd repo
+- cat README.md
+- git branch -a
+- git checkout dev
+- cat README.md
+- password: jq9Dfg2rXsfYsWMgFuKlXhphjdH7USgX
+
+## Level 30
+
+Solution
+
+- mktemp -d
+- cd /tmp/tmp.3u1BwB0vQ4
+- git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo
+- jq9Dfg2rXsfYsWMgFuKlXhphjdH7USgX
+- cd repo
+- cat README.md
+- git tag
+- git show secret
+- 82NkymblpGBYmIXG6ZQ8YldBYstHpfUf
+
+## Level 30
+
+Solution
+
+- mktemp -d
+- cd /tmp/tmp.3u1BwB0vQ4
+- git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo
+- jq9Dfg2rXsfYsWMgFuKlXhphjdH7USgX
+- cd repo
+- cat README.md
+- git tag
+- git show secret
+- 82NkymblpGBYmIXG6ZQ8YldBYstHpfUf
