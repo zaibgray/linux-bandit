@@ -460,11 +460,21 @@ Solution
 
 ## Level 27
 
-Login
-
-- ssh -p 2220 bandit27@bandit.labs.overthewire.org
-- password: STJLJBRRphMxKB392CT4iOr5CbzPU9ER
-
 Solution
 
--
+- mktemp -d
+- cd /tmp/tmp.BN6RT8tSpN
+- git clone ssh://bandit27-git@bandit.labs.overthewire.org:2220/home/bandit27-git/repo
+- password to enter: STJLJBRRphMxKB392CT4iOr5CbzPU9ER
+- cd repo
+- cat readme
+- password: y8Yd2ssKcpHpud7UvOSOxwamRMzIGIeQ
+
+
+## Level 28
+
+Login
+
+- ssh -p 2220 bandit28@bandit.labs.overthewire.org
+- password: y8Yd2ssKcpHpud7UvOSOxwamRMzIGIeQ
+
