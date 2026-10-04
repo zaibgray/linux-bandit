@@ -473,8 +473,24 @@ Solution
 
 ## Level 28
 
+Solution
+
+- mktemp -d
+- cd /tmp/tmp.S8d9hm3zlw
+- git clone ssh://bandit28-git@bandit.labs.overthewire.org:2220/home/bandit28-git/repo
+- password: y8Yd2ssKcpHpud7UvOSOxwamRMzIGIeQ
+- cd repo
+- cat README.md
+- git log
+- copy fix info leak: 4357a6e76c600eb95daf13b1c315b95faab9d4e6
+- git show 4357a6e76c600eb95daf13b1c315b95faab9d4e6
+- password: Em7eGtqaMySwNFjCpwzzHhLhospOcdt0
+
+## Level 26
+
 Login
 
-- ssh -p 2220 bandit28@bandit.labs.overthewire.org
-- password: y8Yd2ssKcpHpud7UvOSOxwamRMzIGIeQ
+- ssh -p 2220 bandit29@bandit.labs.overthewire.org
+- password: Em7eGtqaMySwNFjCpwzzHhLhospOcdt0
 
+Solution
