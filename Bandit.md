@@ -515,16 +515,38 @@ Solution
 - git show secret
 - 82NkymblpGBYmIXG6ZQ8YldBYstHpfUf
 
-## Level 30
+## Level 31
 
 Solution
 
 - mktemp -d
-- cd /tmp/tmp.3u1BwB0vQ4
-- git clone ssh://bandit30-git@bandit.labs.overthewire.org:2220/home/bandit30-git/repo
-- jq9Dfg2rXsfYsWMgFuKlXhphjdH7USgX
+- cd /tmp/tmp.FnbS3GPPGT
+- git clone ssh://bandit31-git@bandit.labs.overthewire.org:2220/home/bandit31-git/repo
+- 82NkymblpGBYmIXG6ZQ8YldBYstHpfUf
 - cd repo
 - cat README.md
-- git tag
-- git show secret
-- 82NkymblpGBYmIXG6ZQ8YldBYstHpfUf
+- echo 'May I come in?' > key.txt
+- ls -la
+- cat key.txt
+- git add -f key.txt
+- git config user.name "zei"
+- git config user.email "zei@localhost"
+- git commit -m "Add key"
+- git push -u origin master
+- pWuj5jBQ6IgV0NXwiH6g1pXRF8S1YvbT
+
+## Level 23
+
+Login
+
+- ssh -p 2220 bandit32@bandit.labs.overthewire.org
+- password: pWuj5jBQ6IgV0NXwiH6g1pXRF8S1YvbT
+
+Solution
+
+- $0
+- ls -la
+- whoami
+- cat /etc/bandit\_pass/bandit33
+- u4P2CyPOwPGLe94RdD9Uo2FxFwvnFswM
+-
