@@ -535,7 +535,7 @@ Solution
 - git push -u origin master
 - pWuj5jBQ6IgV0NXwiH6g1pXRF8S1YvbT
 
-## Level 23
+## Level 32
 
 Login
 
@@ -549,4 +549,15 @@ Solution
 - whoami
 - cat /etc/bandit\_pass/bandit33
 - u4P2CyPOwPGLe94RdD9Uo2FxFwvnFswM
--
+
+## Level 33
+
+Login
+
+- ssh -p 2220 bandit33@bandit.labs.overthewire.org
+- password: u4P2CyPOwPGLe94RdD9Uo2FxFwvnFswM
+
+Solution
+
+- ls
+- cat README.txt
